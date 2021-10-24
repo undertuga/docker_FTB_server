@@ -1,2 +1,3 @@
-# docker_FTB_server
+# FTB Minecraft Server | Docker Implementation
+
 Docker implementation of the Minecraft FTB Server
