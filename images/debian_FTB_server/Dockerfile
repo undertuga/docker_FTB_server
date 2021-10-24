@@ -17,7 +17,7 @@ RUN apt install -y build-essential vim htop netcat dnsutils net-tools wget defau
 RUN mkdir /var/FTB
 RUN wget https://api.modpacks.ch/public/modpack/91/2085/server/linux -O /var/FTB/ftb_install
 RUN chmod +x /var/FTB/ftb_install
-RUN cd /var/FTB && ./ftb_install ${MOD_ID} --auto --verbose --latest
+RUN "cd /var/FTB && ./ftb_install $MOD_ID --auto --verbose --latest"
 
 # injecting previously accepted EULA
 RUN echo "eula=true" > /var/FTB/eula.txt
