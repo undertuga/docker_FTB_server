@@ -17,7 +17,6 @@ services:
     tty: true
     command: /bin/bash -c "cd /var/FTB && ./start.sh"
 
-
 volumes:
   ftb-mod:
     driver: local
