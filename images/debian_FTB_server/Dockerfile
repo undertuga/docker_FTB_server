@@ -9,7 +9,6 @@ LABEL "description"="Debian Based | FTB Minecraft Server"
 
 # exposing required tcp / udp ports
 EXPOSE 25565
-EXPOSE 19132
 
 # updating and installing required packages on base system
 RUN apt update && apt upgrade -y
