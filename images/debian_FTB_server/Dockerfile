@@ -13,12 +13,12 @@ EXPOSE 19132
 
 # updating and installing required packages on base system
 RUN apt update && apt upgrade -y
-RUN apt install -y build-essential vim htop netcat dnsutils net-tools wget default-jre default-jdk
+RUN apt install -y wget default-jre default-jdk
 
 # setting up & running FTB server install
 ARG MOD_ID
 RUN mkdir /var/FTB
-ADD ./ftb_install /var/FTB/ftb_install
+RUN wget https://api.modpacks.ch/public/modpack/91/2085/server/linux -O /var/FTB/ftb_install
 RUN chmod +x /var/FTB/ftb_install && chown -R 777 /var/FTB/ftb_install
 RUN cd /var/FTB && ./ftb_install ${MOD_ID} --auto --verbose
 

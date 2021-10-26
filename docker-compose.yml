@@ -6,29 +6,17 @@ services:
 
 
   ftb-server:
-    container_name: ftb-server
+    container_name: ftb-server-mod-${MOD_ID}
     build: images/debian_FTB_server
-    image: ftb-server:1.0
-    hostname: ftb-server
+    image: ftb-server-mod-${MOD_ID}:1.0
+    volumes:
+      - ftb-mod:/var/FTB
+    hostname: ftb-server-mod-${MOD_ID}
     ports:
-      - "25565:25565"
-      - "19132:19132"
-    networks:
-      ftb-net:
-        ipv4_address: 100.0.0.2
+      - "25565:25565/tcp"
     tty: true
     command: /bin/bash -c "cd /var/FTB && ./start.sh"
 
-
 volumes:
-  ftb:
+  ftb-mod:
     driver: local
-
-
-networks:
-  ftb-net:
-    driver: bridge
-    ipam:
-     config:
-       - subnet: 100.0.0.0/16
-         gateway: 100.0.0.1
