@@ -4,10 +4,12 @@
 version: '3.7'
 services:
 
-
   ftb-server:
     container_name: ftb-server-mod-${MOD_ID}
-    build: images/debian_FTB_server
+    build:
+      context: images/debian_FTB_server
+      args:
+        - MOD_ID
     image: ftb-server-mod-${MOD_ID}:1.0
     volumes:
       - ftb-mod:/var/FTB
