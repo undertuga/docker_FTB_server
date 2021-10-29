@@ -9,6 +9,13 @@ In this example, we will boot up a FTB Minecraft server with the OceanBlock modp
 
 `export MOD_ID=91 && docker-compose up --build -d `
 
+After that, you should have a fully functional and ready to go server!
+Remenber to make sure that port 25565/tcp is open on your firewall.
+
+Run `docker ps -a ` to check your container status.
+
+To access the container, just run `docker exec -it [container-name] bash`.
+
 
 - [Feed the Beast Website](https://feed-the-beast.com/)
 - [Docker Website](https://www.docker.com)

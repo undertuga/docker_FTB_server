@@ -23,3 +23,6 @@ RUN cd /var/FTB && ./ftb_install ${MOD_ID} --auto --verbose
 
 # injecting previously accepted EULA
 RUN echo "eula=true" > /var/FTB/eula.txt
+
+# injecting custom server config
+ADD ./server.properties /var/FTB/server.properties
