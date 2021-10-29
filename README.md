@@ -16,6 +16,7 @@ Run `docker ps -a ` to check your container status.
 
 To access the container, just run `docker exec -it [container-name] bash`.
 
+Feel free to edit the *server.properties* file locate at *images/debian_FTB_server/server.properties*.
 
 - [Feed the Beast Website](https://feed-the-beast.com/)
 - [Docker Website](https://www.docker.com)
