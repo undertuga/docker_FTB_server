@@ -1,4 +1,8 @@
 # FTB Minecraft Server | Docker Implementation
+
+![](https://s.softdeluxe.com/icons/png/128/6724/6724736.png)
+![](https://forum.feed-the-beast.com/data/attachments/3/3788-1a52e7eaf3d905d43111cc5a0b463ec9.jpg)
+
 Docker implementation of the Minecraft FTB Server (Debian based)
 ***
 
